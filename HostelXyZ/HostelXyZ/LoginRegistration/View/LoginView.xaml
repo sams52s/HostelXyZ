@@ -1,12 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HostelXyZ.LoginRegistration.View.LoginView">
+             x:Class="HostelXyZ.LoginRegistration.View.LoginView"
+             Title="Login"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="LoginBG.jpg"
+             BackgroundColor="#eaebf3"
+             >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="#03cffc" Background="Transparent">
+                <StackLayout HeightRequest="250">
+                    <StackLayout  >
+                        <Grid >
+                            <Grid.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="WidthRequest" Value="70" />
+                                <Setter Property="HeightRequest" Value="35" />
+                                <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+                                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                                <Setter Property="CornerRadius" Value="25" />
+                                    <Setter Property="FontSize" Value="10" />
+                                    <Setter Property="FontFamily" Value="SFSemiBold" />
+                                <Setter Property="Grid.Row" Value="0" />
+                            </Style>
+                        </Grid.Resources>
+                            <Button Text="English" BackgroundColor="#0097eb" Grid.Column="3" />
+                            
+                            <Button Text="Bangla" BackgroundColor="#ffffff" Grid.Column="4"/>
+                        </Grid>
+                    </StackLayout>
+                    
+                    
+                    <StackLayout>
+                        <Image Source="home.png" VerticalOptions="EndAndExpand" HeightRequest="200"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                <Label Text="Welcome to" TextColor="Black" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+                <Label Text="HotelXyZ" TextColor="#0097eb" FontSize="35" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+                <StackLayout WidthRequest="280" Padding="0" Spacing="1">
+                    <Frame >
+                        <Entry
+                            x:Name="Email"
+                            Text="{Binding Email}"
+                            Keyboard="Email"
+                            Placeholder="Email.."
+                            TextColor="Black"
+                            PlaceholderColor="#000"
+                            Background="Transparent"
+                            />  
+                    </Frame>
+                    <Frame>
+                        <Entry
+                            x:Name="Password"
+                            Text="{Binding Password}"
+                            IsPassword="True"
+                            Placeholder="Password"
+                            TextColor="Black"
+                            PlaceholderColor="#000"
+                    />  
+                    </Frame>
+                    
+                </StackLayout>
+                <Button
+                    x:Name= "loginbtn" Text = "Login " 
+                    Command="{Binding Loginbtn_Clicked}"
+                    
+                    Padding="15"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#2d4e91"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    CornerRadius="10" 
+                    WidthRequest="200"
+                ></Button>
+                <Button Text="Registration" 
+                        BackgroundColor="#0097eb"  
+                        x:Name="Registration"
+                        CornerRadius="15"
+                        Command="{Binding Registrationbtn_Clicked}"
+                        Padding="10"
+                        Margin="0,10,0,5"
+                        FontSize="16"
+                        TextColor="Black"/>
+                <Label Text="To Create account" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

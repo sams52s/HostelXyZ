@@ -66,6 +66,11 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Font\SFSemiBold.ttf" />
+    <AndroidResource Include="Resources\Font\SF.ttf" />
+    <AndroidResource Include="Resources\Font\SFBlack.ttf" />
+    <AndroidResource Include="Resources\Font\SFBoldItalic.ttf" />
+    <AndroidResource Include="Resources\Font\SFExtraLight.ttf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\styles.xml" />
@@ -84,13 +89,16 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\LoginBG.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HostelXyZ\HostelXyZ.csproj">
       <Project>{E9A0BD06-17B7-4D0A-8101-5B2550994280}</Project>
       <Name>HostelXyZ</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
