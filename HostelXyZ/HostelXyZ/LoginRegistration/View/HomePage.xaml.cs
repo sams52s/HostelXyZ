@@ -1,16 +1,22 @@
 ﻿using HostelXyZ.LoginRegistration.ViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace HostelXyZ.LoginRegistration.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegistrationView : ContentPage
+    public partial class HomePage : ContentPage
     {
-        public RegistrationView()
+        public HomePage()
         {
             InitializeComponent();
-            BindingContext = new RegistrationViewModel(Navigation);
+            BindingContext = new HomeViewModel(Navigation);
         }
     }
 }

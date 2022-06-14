@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelXyZ.Android", "Hostel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelXyZ.iOS", "HostelXyZ\HostelXyZ.iOS\HostelXyZ.iOS.csproj", "{CF9B0E75-5FCD-4D24-A311-96E2B31E37CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelXyZ", "HostelXyZ\HostelXyZ\HostelXyZ.csproj", "{9B54C14B-4ECD-4033-9EB7-319C54090F25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostelXyZ", "HostelXyZ\HostelXyZ\HostelXyZ.csproj", "{9B54C14B-4ECD-4033-9EB7-319C54090F25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

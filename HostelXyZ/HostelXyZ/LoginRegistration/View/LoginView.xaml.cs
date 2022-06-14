@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using HostelXyZ.LoginRegistration.ViewModel;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace HostelXyZ.LoginRegistration.View
@@ -9,6 +10,8 @@ namespace HostelXyZ.LoginRegistration.View
         public LoginView()
         {
             InitializeComponent();
+            BindingContext = new LoginViewModel(Navigation);
+
         }
     }
 }
