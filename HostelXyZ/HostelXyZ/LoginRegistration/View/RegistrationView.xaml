@@ -7,16 +7,79 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Label Text="If you want to login.." TextColor="WhiteSmoke" Margin="20,-10,0,0"/>
-        
-                <Button 
-                    x:Name="Back" Text="Login"
-                    Command="{Binding Loginbtn_Clicked}" 
-                    BackgroundColor="WhiteSmoke"
-                    HorizontalOptions="Center"
-                    />
-        </StackLayout>
+                <StackLayout VerticalOptions="Center" Margin="10,50,10,15">
+                    <StackLayout.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="20" />
+                            <Setter Property="TextColor" Value="#001f40" />
+                            <Setter Property="TextDecorations" Value="Underline" />
+                            <Setter Property="Margin" Value="5" />
+                            <Setter Property="CharacterSpacing" Value="2" />
+                        </Style>
+                        <Style TargetType="Entry">
+                            <Setter Property="FontSize" Value="15" />
+                            <Setter Property="PlaceholderColor" Value="#001f40" />
+                            <Setter Property="Margin" Value="5" />
+                            <Setter Property="HeightRequest" Value="40" />
+                            <Setter Property="BackgroundColor" Value="#dceafa" />
+                        </Style>
+                    </StackLayout.Resources>
+                    <ScrollView>
+                        <Frame Padding="20">
+                            <ContentView>
+                                <StackLayout Padding="10" Spacing="5">
+                                    <Label Text="Registration Here" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
 
+                                    <Label Text="Your Email: " />
+                                    <Entry
+                                        BackgroundColor="#eaebf3"
+                                        x:Name="EmailEntry" Placeholder="abcd@xyz.com"
+                                        Text="{Binding Email}"
+                                        Keyboard="Email" />
+                                    <Label Text="Password: " />
+                                    <Entry
+                                        BackgroundColor="#eaebf3"
+                                        x:Name="Password"
+                                        Text="{Binding Password}"
+                                         Placeholder = "Password"
+                                         IsPassword = "True" />
+                                    <Label Text="Confirem Password: " />
+                                    <Entry
+                                        x:Name="ConfiremPassword"
+                                        BackgroundColor="#eaebf3"
+                                        Placeholder = "Confrim Password"
+                                        Text="{Binding ConfiremPassword}"
+                                        IsPassword = "True" />
+                                   
+                                    <Button
+                                        Command="{Binding RegistrationBtn_Clicked}"
+                                        x:Name= "Registrationbtn" Text = "Registration "
+                                        Padding="15"
+                                        Margin="5"
+                                        FontSize="18"
+                                        FontAttributes="Bold"
+                                        TextColor="WhiteSmoke"
+                                        BackgroundColor="#2d4e91"
+                                        BorderColor="Black"
+                                        BorderWidth="2"
+                                        CornerRadius="10"
+                                        WidthRequest="200"
+                                        CharacterSpacing ="2" />
+                                    
+                                </StackLayout>
+                            </ContentView>
+                        </Frame>
+                    </ScrollView>
+                </StackLayout>
+
+                <Label Text="If you want to login.." TextColor="WhiteSmoke" Margin="20,-10,0,0" />
+
+                <Button
+                    x:Name="Back" Text="Login"
+                    Command="{Binding Loginbtn_Clicked}"
+                    BackgroundColor="WhiteSmoke"
+                    HorizontalOptions="Center" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

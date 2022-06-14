@@ -11,7 +11,7 @@ namespace HostelXyZ
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginView());
+            MainPage = new NavigationPage(new AllUser());
         }
 
         protected override void OnStart()

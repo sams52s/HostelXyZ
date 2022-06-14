@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace HostelXyZ.LoginRegistration.ViewModel
 {
-    internal class HomeViewModel : INotifyPropertyChanged
+    public class HomeViewModel : INotifyPropertyChanged
     {
         public HomeViewModel(INavigation navigation)
         {
